@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX AUTO TECH | Engenharia Automotiva & Performance de Alta Precisão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        electric: {
+                            500: '#FF1E38',
+                            600: '#E0112B',
+                            700: '#B80B20',
+                        },
+                        obsidian: {
+                            800: '#18181B',
+                            900: '#0F0F12',
+                            950: '#09090B',
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 25px rgba(255, 30, 56, 0.35)',
+                        'neon-lg': '0 0 40px rgba(255, 30, 56, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-obsidian-950 text-zinc-100 font-sans antialiased selection:bg-electric-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-obsidian-950/85 backdrop-blur-md border-b border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-9 h-9 rounded-lg bg-electric-500 flex items-center justify-center shadow-neon group-hover:scale-105 transition-transform">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <span class="text-xl font-black tracking-wider uppercase text-white">APEX<span class="text-electric-500">TECH</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#tecnologia" class="hover:text-white transition-colors">Tecnologia & Arquitetura</a>
+                <a href="#depoimentos" class="hover:text-white transition-colors">Resultados Reais</a>
+                <a href="#oferta" class="hover:text-white transition-colors">Pacotes & Oferta</a>
+            </nav>
+
+            <a href="#oferta" class="bg-zinc-900 hover:bg-electric-500 text-white border border-zinc-700 hover:border-electric-500 px-5 py-2.5 rounded-lg text-sm font-bold transition-all duration-300">
+                Agendar Diagnóstico
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden bg-grid-pattern">
+        <!-- Radial Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs font-mono uppercase tracking-widest text-electric-500 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-electric-500 animate-ping"></span>
+                    Engenharia Mecânica & Telemetria OBD-II
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] mb-6">
+                    Potência Máxima. <br class="hidden sm:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-electric-500">Zero Adivinhação.</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-10">
+                    Esqueça as oficinas convencionais de tentativa e erro. Combinamos <strong class="text-zinc-200">diagnóstico computadorizado de alta velocidade</strong>, equipamentos modulares e engenharia de precisão para devolver a performance de fábrica ao seu veículo em tempo recorde.
+                </p>
+
+                <!-- CTA Principal -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                    <a href="#oferta" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-electric-500 hover:bg-electric-600 text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-xl shadow-neon hover:shadow-neon-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <span>RESERVAR CHECK-UP COMPLETO</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                    <a href="#tecnologia" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-obsidian-800/80 hover:bg-zinc-800 text-zinc-200 font-semibold border border-zinc-700/80 transition-colors">
+                        Conhecer Metodologia
+                    </a>
+                </div>
+
+                <!-- Benefícios Principais -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-zinc-800/80 text-left">
+                    <div class="flex items-start gap-3 p-4 rounded-xl bg-obsidian-900/60 border border-zinc-800/60">
+                        <div class="p-2 rounded-lg bg-electric-500/10 text-electric-500 shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-sm">Entrega Expressa</h3>
+                            <p class="text-xs text-zinc-400 mt-0.5">Revisões e reparos concluídos até 3x mais rápido que a média.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 rounded-xl bg-obsidian-900/60 border border-zinc-800/60">
+                        <div class="p-2 rounded-lg bg-electric-500/10 text-electric-500 shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-sm">Garantia Blindada</h3>
+                            <p class="text-xs text-zinc-400 mt-0.5">12 meses de cobertura total em peças originais e mão de obra.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-4 rounded-xl bg-obsidian-900/60 border border-zinc-800/60">
+                        <div class="p-2 rounded-lg bg-electric-500/10 text-electric-500 shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-sm">Laudo Digital em Vídeo</h3>
+                            <p class="text-xs text-zinc-400 mt-0.5">Transparência absoluta direto no seu WhatsApp antes de qualquer troca.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Características Técnicas -->
+    <section id="tecnologia" class="py-24 bg-obsidian-900 border-y border-zinc-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="font-mono text-xs uppercase tracking-widest text-electric-500 font-bold">// ESPECIFICAÇÕES DO SISTEMA</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Infraestrutura de Alta Performance</h2>
+                </div>
+                <p class="text-zinc-400 max-w-md text-sm sm:text-base">
+                    Nossas estações de serviço foram projetadas com hardware proprietário para máxima eficiência mecânica e eletrônica.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: Carregamento Rápido -->
+                <div class="group bg-obsidian-950 border border-zinc-800 hover:border-electric-500/60 rounded-2xl p-8 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-electric-500/5 rounded-bl-full group-hover:bg-electric-500/10 transition-colors"></div>
+                    <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-electric-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div class="font-mono text-xs text-electric-500 mb-2">01 // FAST-CHARGE & FLUSH</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Carregamento Rápido de Sistemas</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Estação de recarga inteligente de alta amperagem para baterias AGM/EFB e veículos híbridos, aliada à troca pressurizada de fluidos em menos de 45 minutos.
+                    </p>
+                    <div class="pt-4 border-t border-zinc-900 flex items-center justify-between text-xs font-mono text-zinc-500">
+                        <span>EFICIÊNCIA ENERGÉTICA</span>
+                        <span class="text-zinc-200 font-bold">+320% VELOCIDADE</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Múltiplas Portas -->
+                <div class="group bg-obsidian-950 border border-zinc-800 hover:border-electric-500/60 rounded-2xl p-8 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-electric-500/5 rounded-bl-full group-hover:bg-electric-500/10 transition-colors"></div>
+                    <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-electric-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="font-mono text-xs text-electric-500 mb-2">02 // MULTI-PORT TELEMETRY</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Múltiplas Portas de Diagnóstico</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Leitura simultânea via interfaces OBD-II, CAN-Bus, DoIP e Ethernet Automotiva. Mapeamos injeção, câmbio automatizado, ABS e módulos híbridos em paralelo.
+                    </p>
+                    <div class="pt-4 border-t border-zinc-900 flex items-center justify-between text-xs font-mono text-zinc-500">
+                        <span>COMPATIBILIDADE</span>
+                        <span class="text-zinc-200 font-bold">140+ MONTADORAS</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Design Compacto -->
+                <div class="group bg-obsidian-950 border border-zinc-800 hover:border-electric-500/60 rounded-2xl p-8 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-electric-500/5 rounded-bl-full group-hover:bg-electric-500/10 transition-colors"></div>
+                    <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-electric-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                        </svg>
+                    </div>
+                    <div class="font-mono text-xs text-electric-500 mb-2">03 // MODULAR COMPACT BAY</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Design Compacto & Baia Móvel</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Bancadas modulares de engenharia enxuta que eliminam deslocamentos desnecessários na oficina — ou levam nossa unidade compacta até a sua garagem.
+                    </p>
+                    <div class="pt-4 border-t border-zinc-900 flex items-center justify-between text-xs font-mono text-zinc-500">
+                        <span>ATENDIMENTO</span>
+                        <span class="text-zinc-200 font-bold">BOX OU IN-LOCO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social (Depoimentos) -->
+    <section id="depoimentos" class="py-24 bg-obsidian-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="font-mono text-xs uppercase tracking-widest text-electric-500 font-bold">// RELATÓRIOS DE CLIENTES</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">Quem Exige Precisão, Confia na Apex</h2>
+                <p class="text-zinc-400 mt-3 text-sm sm:text-base">Avaliação média de <strong class="text-white">4.98/5.0</strong> baseada em mais de 1.420 serviços executados.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Depoimento 1 -->
+                <div class="bg-obsidian-900 border border-zinc-800/90 p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-electric-500 mb-4">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Passei por três oficinas que queriam condenar o módulo do meu câmbio DSG. Na Apex, conectaram a telemetria multi-porta, identificaram falha de pressão em 20 minutos e resolveram por um terço do valor."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                        <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center font-bold text-sm text-electric-500">
+                            RM
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Rafael Monteiro</div>
+                            <div class="text-xs text-zinc-500">Audi A4 2.0 TFSI • São Paulo, SP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-obsidian-900 border border-zinc-800/90 p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-electric-500 mb-4">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "O atendimento com a unidade de design compacto no meu condomínio salvou minha semana. Fizeram a recarga rápida do sistema auxiliar híbrido e a revisão de freios com laudo em vídeo impecável."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                        <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center font-bold text-sm text-electric-500">
+                            CS
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Camila Silveira</div>
+                            <div class="text-xs text-zinc-500">Volvo XC60 Recharge • Campinas, SP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="bg-obsidian-900 border border-zinc-800/90 p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-electric-500 mb-4">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Nível de organização cirúrgico. Nada de peça empurrada sem necessidade. Recebi o gráfico completo da saúde do motor e meu carro voltou com resposta de acelerador muito mais linear."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                        <div class="w-10 h-10 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center font-bold text-sm text-electric-500">
+                            TH
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Thiago Henrique</div>
+                            <div class="text-xs text-zinc-500">BMW 320i M Sport • Curitiba, PR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta Especial + Countdown -->
+    <section id="oferta" class="py-24 bg-obsidian-900 border-t border-zinc-800/80 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-electric-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Banner de Escassez / Countdown -->
+            <div class="bg-obsidian-950 border border-electric-500/40 rounded-2xl p-6 sm:p-8 mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-neon">
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 text-electric-500 font-mono text-xs font-bold uppercase tracking-wider mb-1">
+                        <span class="w-2 h-2 rounded-full bg-electric-500 animate-pulse"></span>
+                        Lote Promocional de Diagnóstico — Vagas Limitadas
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black text-white">40% OFF + Scanner Multi-Porta Gratuito</h3>
+                    <p class="text-zinc-400 text-sm mt-1">Garanta sua vaga antes que o cronômetro zere e o valor retorne à tabela integral.</p>
+                </div>
+
+                <!-- Temporizador -->
+                <div class="flex items-center gap-3 font-mono" id="countdown-timer">
+                    <div class="bg-obsidian-900 border border-zinc-800 rounded-xl px-4 py-3 text-center min-w-[72px]">
+                        <span id="hours" class="text-2xl sm:text-3xl font-bold text-white block">02</span>
+                        <span class="text-[10px] text-zinc-500 uppercase">Horas</span>
+                    </div>
+                    <span class="text-electric-500 font-bold text-2xl">:</span>
+                    <div class="bg-obsidian-900 border border-zinc-800 rounded-xl px-4 py-3 text-center min-w-[72px]">
+                        <span id="minutes" class="text-2xl sm:text-3xl font-bold text-white block">47</span>
+                        <span class="text-[10px] text-zinc-500 uppercase">Min</span>
+                    </div>
+                    <span class="text-electric-500 font-bold text-2xl">:</span>
+                    <div class="bg-obsidian-900 border border-electric-500/50 rounded-xl px-4 py-3 text-center min-w-[72px]">
+                        <span id="seconds" class="text-2xl sm:text-3xl font-bold text-electric-500 block">59</span>
+                        <span class="text-[10px] text-zinc-500 uppercase">Seg</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards de Compra -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Plano 1: Diagnóstico & Recarga -->
+                <div class="bg-obsidian-950 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="font-mono text-xs text-zinc-400 uppercase tracking-wider">Protocolo Essencial</span>
+                        <h3 class="text-2xl font-extrabold text-white mt-1">Telemetria & Fast-Charge</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Ideal para check-up preventivo, luz de injeção acesa ou avaliação pré-compra.</p>
+
+                        <div class="my-6 pb-6 border-b border-zinc-800">
+                            <span class="text-sm text-zinc-500 line-through">De R$ 349,00</span>
+                            <div class="flex items-baseline gap-2 mt-1">
+                                <span class="text-4xl font-black text-white">R$ 197</span>
+                                <span class="text-zinc-400 text-sm">à vista ou 3x sem juros</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Varredura completa via múltiplas portas OBD-II
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Teste e carregamento rápido de bateria & alternador
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Inspeção visual de 45 itens de segurança
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Relatório técnico em PDF + vídeo explicativo
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="initiateCheckout('Protocolo Telemetria & Fast-Charge', 'R$ 197,00')" class="w-full py-4 px-6 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm uppercase tracking-wider border border-zinc-700 transition-all cursor-pointer">
+                        Selecionar Protocolo Essencial
+                    </button>
+                </div>
+
+                <!-- Plano 2: Revisão Full Performance (Destaque) -->
+                <div class="bg-obsidian-950 border-2 border-electric-500 rounded-3xl p-8 flex flex-col justify-between relative shadow-neon">
+                    <div class="absolute -top-3.5 right-8 bg-electric-500 text-white text-[11px] font-black uppercase tracking-widest px-3.5 py-1 rounded-full">
+                        Mais Escolhido
+                    </div>
+
+                    <div>
+                        <span class="font-mono text-xs text-electric-500 uppercase tracking-wider">Protocolo Apex Pro</span>
+                        <h3 class="text-2xl font-extrabold text-white mt-1">Revisão Full Performance</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Manutenção completa com insumos sintéticos premium e calibração eletrônica.</p>
+
+                        <div class="my-6 pb-6 border-b border-zinc-800">
+                            <span class="text-sm text-zinc-500 line-through">De R$ 890,00</span>
+                            <div class="flex items-baseline gap-2 mt-1">
+                                <span class="text-4xl font-black text-white">R$ 534</span>
+                                <span class="text-zinc-400 text-sm">ou 6x de R$ 89,00</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-zinc-200 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <strong>Tudo do Protocolo Essencial incluso</strong>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Troca de óleo 100% sintético + filtros originais
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Limpeza ultrassônica de bicos e corpo de borboleta
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-electric-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Opção de atendimento via Unidade Compacta Móvel
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="initiateCheckout('Revisão Full Performance Apex Pro', 'R$ 534,00')" class="w-full py-4 px-6 rounded-xl bg-electric-500 hover:bg-electric-600 text-white font-extrabold text-sm uppercase tracking-wider shadow-neon hover:shadow-neon-lg transition-all cursor-pointer flex items-center justify-center gap-2">
+                        <span>GARANTIR VAGA COM 40% OFF</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-obsidian-950 border-t border-zinc-900 py-12 text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-black text-white tracking-wider">APEX<span class="text-electric-500">TECH</span></span>
+                <span>• Engenharia Automotiva</span>
+            </div>
+            <p class="text-xs text-zinc-600">© 2026 Apex Auto Tech Ltda. Todos os direitos reservados. Pagamento 100% criptografado.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Simulação de Checkout -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-obsidian-900 border border-zinc-700 rounded-2xl max-w-md w-full p-8 text-center relative shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-electric-500/15 border border-electric-500/40 flex items-center justify-center mx-auto mb-5">
+                <svg class="w-7 h-7 text-electric-500 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </div>
+            <span class="font-mono text-xs text-electric-500 uppercase tracking-widest">Ambiente Seguro SSL</span>
+            <h4 class="text-xl font-black text-white mt-1">Redirecionando para o Checkout...</h4>
+            <p class="text-zinc-400 text-sm mt-2">
+                Preparando reserva para <strong id="modal-plan-name" class="text-white"></strong> no valor promocional de <strong id="modal-plan-price" class="text-electric-500"></strong>.
+            </p>
+            <div class="mt-6 bg-obsidian-950 rounded-lg p-3 border border-zinc-800 font-mono text-xs text-zinc-400">
+                Token de Desconto Aplicado: <span class="text-emerald-400 font-bold">APEX40OFF</span>
+            </div>
+            <button onclick="closeCheckoutModal()" class="mt-6 text-xs text-zinc-500 hover:text-white underline cursor-pointer">
+                Cancelar simulação
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Temporizador de Escassez (Countdown de 2h 47m 59s)
+        let totalSeconds = (2 * 3600) + (47 * 60) + 59;
+
+        function updateCountdown() {
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            if (totalSeconds <= 0) {
+                totalSeconds = (2 * 3600) + (47 * 60) + 59; // Reinicia ciclo
+            }
+
+            const hrs = Math.floor(totalSeconds / 3600);
+            const mins = Math.floor((totalSeconds % 3600) / 60);
+            const secs = totalSeconds % 60;
+
+            hoursEl.textContent = String(hrs).padStart(2, '0');
+            minutesEl.textContent = String(mins).padStart(2, '0');
+            secondsEl.textContent = String(secs).padStart(2, '0');
+
+            totalSeconds--;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Simulação de Redirecionamento para Checkout
+        function initiateCheckout(planName, planPrice) {
+            const modal = document.getElementById('checkout-modal');
+            document.getElementById('modal-plan-name').textContent = planName;
+            document.getElementById('modal-plan-price').textContent = planPrice;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
